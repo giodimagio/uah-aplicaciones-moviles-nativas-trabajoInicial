@@ -8,51 +8,50 @@
 
     <!-- [TextInputLayout] - Layout para el componente de inserción de texto -->
     <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/subjectTextInputLayout"
-
+        android:id="@+id/asignaturaTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="48dp"
         android:maxWidth="480dp"
-
         app:counterEnabled="true"
         app:counterMaxLength="40"
-
         app:endIconCheckable="true"
         app:endIconDrawable="@drawable/ic_menu_book_24"
-
         app:helperText="@string/campoObligatorioHelperText"
         app:helperTextEnabled="true"
         app:helperTextTextColor="@color/md_theme_dark_error"
-
         android:hint="@string/asignaturaTextInputLayoutHint"
         app:hintEnabled="true"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="wrap"
-
         app:startIconDrawable="@drawable/ic_menu_book_24"
-
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense">
 
         <!-- [TextInputEditText] - Componente para inserción de texto -->
         <com.google.android.material.textfield.TextInputEditText
-
+            android:id="@+id/asignaturaTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:inputType="text"
-
             android:maxLength="40"
             android:maxLines="1"
             android:maxWidth="480dp"
-
             style="@style/ThemeOverlay.Material3.TextInputEditText" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/añadirButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="548dp"
+        android:text="@string/añadirButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asignaturaTextInputLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
