@@ -6,4 +6,5 @@
     <string name="asignaturaTextInputLayoutHint">Introduce el nombre de la asignatura</string>
     <string name="campoObligatorioHelperText">Campo obligatorio*</string>
     <string name="añadirButton">Añadir asignatura</string>
+    <string name="elementoLista"></string>
 </resources>
