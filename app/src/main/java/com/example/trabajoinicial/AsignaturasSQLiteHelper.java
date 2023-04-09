@@ -2,6 +2,7 @@ package com.example.trabajoinicial;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -45,5 +46,19 @@ public class AsignaturasSQLiteHelper extends SQLiteOpenHelper {
         registro.put(COLUMN_NAME, nombreAsignatura);
         registro.put(COLUMN_CALIFICACION, calificacionAsignatura);
         db.insert(TABLE_NAME, null, registro);
+    }
+
+    public Cursor leerTabla() {
+        String getSQL_query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(getSQL_query, null);
+        return cursor;
+    }
+
+    public Cursor leerAsignatura(SQLiteDatabase db, String nombreAsignatura){
+        String[] campos = new String[] {COLUMN_ID, COLUMN_NAME};
+        String[] args = new String[] {nombreAsignatura};
+        Cursor cursor = db.query(TABLE_NAME, campos, TABLE_NAME + "=?", args, null, null, null);
+        return cursor;
     }
 }
