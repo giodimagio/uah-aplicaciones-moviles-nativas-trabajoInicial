@@ -13,10 +13,12 @@ import java.util.ArrayList;
 
 public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCustomAdapter.MyViewHolder> {
 
-    private Context context;
-    private ArrayList id_asignatura, nombre_asignatura, calificacion_asignatura;
+    private final Context context;
+    private final ArrayList<String> nombre_asignatura;
+    private final ArrayList<Integer> id_asignatura;
+    private final ArrayList<Integer> calificacion_asignatura;
 
-    public AsignaturasCustomAdapter(Context context, ArrayList id_asignatura, ArrayList nombre_asignatura, ArrayList calificacion_asignatura) {
+    public AsignaturasCustomAdapter(Context context, ArrayList<Integer> id_asignatura, ArrayList<String> nombre_asignatura, ArrayList<Integer> calificacion_asignatura) {
         this.context = context;
         this.id_asignatura = id_asignatura;
         this.nombre_asignatura = nombre_asignatura;
@@ -35,8 +37,7 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         //holder.id_asignatura_text.setText(String.valueOf(id_asignatura.get(position)));
         holder.nombre_asignatura_text.setText(String.valueOf(nombre_asignatura.get(position)));
-        //holder.id_asignatura_text.setText(String.valueOf(id_asignatura.get(position)));
-
+        //holder.calificacion_asignatura_text.setText(String.valueOf(calificacion_asignatura.get(position)));
     }
 
     @Override
@@ -46,8 +47,8 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView id_asignatura_text, nombre_asignatura_text, calificacion_asignatura_text;
-
+        TextView nombre_asignatura_text;
+        // TextView id_asignatura_text, calificacion_asignatura_text;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             //id_asignatura_text = itemView.findViewById(R.id.id_asignatura_text);
