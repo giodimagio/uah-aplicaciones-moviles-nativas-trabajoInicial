@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CreateActivity">
 
-    <!-- [TextInputLayout] - Layout para el componente de inserción de texto -->
+    <!-- [TextInputLayout] - Layout del componente de texto para introducir la asignatura -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/asignaturaTextInputLayout"
         android:layout_width="match_parent"
@@ -17,8 +17,6 @@
         android:maxWidth="480dp"
         app:counterEnabled="true"
         app:counterMaxLength="40"
-        app:endIconCheckable="true"
-        app:endIconDrawable="@drawable/ic_menu_book_24"
         app:helperText="@string/campoObligatorioHelperText"
         app:helperTextEnabled="true"
         app:helperTextTextColor="@color/md_theme_dark_error"
@@ -44,14 +42,52 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- [TextInputLayout] - Layout del componente de texto para introducir la calificación -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/calificacionTextInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:hint="@string/calificacionTextInputLayoutHint"
+        android:maxWidth="480dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="2"
+        app:helperText="@string/campoObligatorioHelperText"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/md_theme_dark_error"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asignaturaTextInputLayout"
+        app:startIconDrawable="@drawable/ic_workspace_premium_24">
+
+        <!-- [TextInputEditText] - Componente para inserción de texto -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/calificacionTextInputEditText"
+            style="@style/ThemeOverlay.Material3.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:maxWidth="480dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/añadirButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="548dp"
         android:text="@string/añadirButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/asignaturaTextInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/calificacionTextInputLayout"
+        app:layout_constraintVertical_bias="0.15
+" />
 </androidx.constraintlayout.widget.ConstraintLayout>
