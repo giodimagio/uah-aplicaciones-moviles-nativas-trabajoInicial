@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -68,8 +67,8 @@ public class CreateActivity extends AppCompatActivity {
 
     // [Función] Habilita/Deshabilita el botón añadirButton en función de si se cumple la validación
     private void validarFormulario() {
-        boolean esUnNombreValido = nombreAsignatura.getText().toString().matches("[A-za-z]+");
-        boolean esUnaCalificacionValida = calificacionAsignatura.getText().toString().matches("[0-9]|10");
+        boolean esUnNombreValido = nombreAsignatura.getText().toString().matches("^(\\p{IsLatin}+\\s)*\\p{IsLatin}++(\\s\\d)?$");
+        boolean esUnaCalificacionValida = calificacionAsignatura.getText().toString().matches("\\d|10");
 
         if (!esUnNombreValido) {
             nombreAsignatura.setError("Introduce un nombre válido");
