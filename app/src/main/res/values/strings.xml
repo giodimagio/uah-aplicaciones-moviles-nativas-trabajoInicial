@@ -7,4 +7,5 @@
     <string name="campoObligatorioHelperText">Campo obligatorio*</string>
     <string name="añadirButton">Añadir asignatura</string>
     <string name="calificacionTextInputLayoutHint">Introduce tu calificación</string>
+    <string name="iconoAsignaturaContentDescription">Icono asignatura</string>
 </resources>
