@@ -10,14 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addFloatingActionButton"
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addExtendedFloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="30dp"
             android:contentDescription="@string/ic_add_30_contentDescription"
-            app:srcCompat="@drawable/ic_add_30" />
+            app:icon="@drawable/ic_add_30"
+            android:text="@string/addExtendedFloatingActionButtonText"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listRecyclerView"

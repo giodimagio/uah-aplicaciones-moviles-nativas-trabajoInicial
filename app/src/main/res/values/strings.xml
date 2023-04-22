@@ -8,4 +8,5 @@
     <string name="añadirButton">Añadir asignatura</string>
     <string name="calificacionTextInputLayoutHint">Introduce tu calificación</string>
     <string name="iconoAsignaturaContentDescription">Icono asignatura</string>
+    <string name="addExtendedFloatingActionButtonText">Añadir asignatura</string>
 </resources>
