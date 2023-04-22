@@ -29,15 +29,15 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.frame_list_item, parent, false);
+        View view = inflater.inflate(R.layout.activity_main_list_item, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         //holder.id_asignatura_text.setText(String.valueOf(id_asignatura.get(position)));
-        holder.nombre_asignatura_text.setText(String.valueOf(nombre_asignatura.get(position)));
-        //holder.calificacion_asignatura_text.setText(String.valueOf(calificacion_asignatura.get(position)));
+        holder.nombreAsignaturaText.setText(String.valueOf(nombre_asignatura.get(position)));
+        holder.calificacionAsignaturaText.setText(String.valueOf(calificacion_asignatura.get(position)));
     }
 
     @Override
@@ -47,13 +47,14 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nombre_asignatura_text;
-        // TextView id_asignatura_text, calificacion_asignatura_text;
+        TextView nombreAsignaturaText;
+        TextView calificacionAsignaturaText;
+        // TextView id_asignatura_text
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             //id_asignatura_text = itemView.findViewById(R.id.id_asignatura_text);
-            nombre_asignatura_text = itemView.findViewById(R.id.nombre_asignatura_text);
-            //calificacion_asignatura_text = itemView.findViewById(R.id.calificacion_asignatura_text);
+            nombreAsignaturaText = itemView.findViewById(R.id.nombreAsignaturaText);
+            calificacionAsignaturaText = itemView.findViewById(R.id.calificacionAsignaturaText);
         }
     }
 }
