@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.listRecyclerView);
-        FloatingActionButton addFloatingActionButton = findViewById(R.id.addFloatingActionButton);
-        addFloatingActionButton.setOnClickListener(view -> {
+        ExtendedFloatingActionButton addExtendedFloatingActionButton = findViewById(R.id.addExtendedFloatingActionButton);
+        addExtendedFloatingActionButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, CreateActivity.class);
             startActivity(intent);
         });
