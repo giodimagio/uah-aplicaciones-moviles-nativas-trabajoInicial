@@ -16,7 +16,7 @@
         android:layout_marginEnd="48dp"
         android:maxWidth="480dp"
         app:counterEnabled="true"
-        app:counterMaxLength="40"
+        app:counterMaxLength="30"
         app:helperText="@string/campoObligatorioHelperText"
         app:helperTextEnabled="true"
         app:helperTextTextColor="@color/md_theme_dark_error"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:maxLength="40"
+            android:maxLength="30"
             android:maxLines="1"
             android:maxWidth="480dp"
             style="@style/ThemeOverlay.Material3.TextInputEditText" />
@@ -78,10 +78,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/añadirButton"
+        android:id="@+id/insertarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/añadirButton"
+        android:text="@string/insertarButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

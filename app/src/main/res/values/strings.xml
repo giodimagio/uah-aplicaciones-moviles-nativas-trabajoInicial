@@ -5,7 +5,7 @@
     <string name="ic_add_30_contentDescription">Añadir</string>
     <string name="asignaturaTextInputLayoutHint">Introduce el nombre de la asignatura</string>
     <string name="campoObligatorioHelperText">Campo obligatorio*</string>
-    <string name="añadirButton">Añadir asignatura</string>
+    <string name="insertarButton">Añadir asignatura</string>
     <string name="calificacionTextInputLayoutHint">Introduce tu calificación</string>
     <string name="iconoAsignaturaContentDescription">Icono asignatura</string>
     <string name="addExtendedFloatingActionButtonText">Añadir asignatura</string>
