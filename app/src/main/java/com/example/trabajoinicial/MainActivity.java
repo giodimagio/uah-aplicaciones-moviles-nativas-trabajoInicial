@@ -13,6 +13,15 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 
 import java.util.ArrayList;
 
+/**
+ * @author Jorge Romero
+ *
+ * @clase MainActivity
+ * @descripcion MainActivity es la clase que se encarga de mostrar la lista de asignaturas
+ * que se encuentran en la base de datos, además de mostrar un botón flotante que permite
+ * agregar una nueva asignatura.
+ * @see AppCompatActivity
+ */
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;

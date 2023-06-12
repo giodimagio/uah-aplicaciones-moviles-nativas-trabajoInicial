@@ -10,17 +10,31 @@ import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * @author Jorge Romero
+ *
+ * @clase CreateActivity
+ * @descripcion Clase que se encarga de crear una nueva asignatura
+ * @see AppCompatActivity
+ */
 public class CreateActivity extends AppCompatActivity {
 
+    /**
+     * @descripcion Atributos de la clase
+     */
     EditText nombreAsignatura, calificacionAsignatura;
     Button insertarButton;
     private final String TAG = getClass().getSimpleName();
 
+    /**
+     * @descripcion Método que se ejecuta al crear la actividad
+     * @param savedInstanceState Bundle con el estado de la actividad
+     * @see Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +84,11 @@ public class CreateActivity extends AppCompatActivity {
         insertarButton.setEnabled(false);
     }
 
-    // [TextWatcher] para el campo nombreAsignatura
+    /**
+     * @descripcion TextWatcher para el campo nombreAsignatura que se encarga de ejecutar la
+     * función validarFormulario() solo cuando se cambia el texto del campo
+     * @see TextWatcher
+     */
     private final TextWatcher nombreAsignaturaTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -84,7 +102,11 @@ public class CreateActivity extends AppCompatActivity {
         }
     };
 
-    // [TextWatcher] para el campo calificacionAsignatura
+    /**
+     * @descripcion TextWatcher para el campo calificacionAsignatura que se encarga de ejecutar la
+     * función validarFormulario() solo cuando se cambia el texto del campo
+     * @see TextWatcher
+     */
     private final TextWatcher calificacionAsignaturaTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -98,8 +120,12 @@ public class CreateActivity extends AppCompatActivity {
         }
     };
 
-    // [Función] Habilita/Deshabilita el botón insertarButton en función de si se cumple la validación
+    /**
+     * @descripcion Función que habilita/deshabilita el botón insertarButton en función de si se cumple la validación
+     */
     private void validarFormulario() {
+
+        // [Validación] Regex para validar el nombre de la asignatura y la calificación
         boolean esUnNombreValido = nombreAsignatura.getText().toString().matches("^(\\p{IsLatin}+\\s)*\\p{IsLatin}++(\\s\\d)?$");
         boolean esUnaCalificacionValida = calificacionAsignatura.getText().toString().matches("\\d|10");
 

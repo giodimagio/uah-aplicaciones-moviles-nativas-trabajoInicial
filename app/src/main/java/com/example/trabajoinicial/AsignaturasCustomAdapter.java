@@ -11,8 +11,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * @author Jorge Romero
+ *
+ * @clase AsignaturasCustomAdapter
+ * @descripcion Clase que se encarga de adaptar los datos de las asignaturas a un RecyclerView
+ * @see RecyclerView
+ * @see MyViewHolder
+ */
 public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCustomAdapter.MyViewHolder> {
 
+    /**
+     * @descripcion Atributos de la clase, constructor y métodos
+     */
     private final Context context;
     private final ArrayList<String> nombre_asignatura;
     private final ArrayList<Integer> id_asignatura;
@@ -25,6 +36,12 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
         this.calificacion_asignatura = calificacion_asignatura;
     }
 
+    /**
+     * @descripcion Metodo que se encarga de inflar el layout de la lista de asignaturas
+     * @param parent El ViewGroup donde se infla el layout
+     * @param viewType El tipo de vista
+     * @return MyViewHolder El ViewHolder de la lista de asignaturas
+     */
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,26 +50,39 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
         return new MyViewHolder(view);
     }
 
+    /**
+     * @descripcion Metodo que se encarga de asignar los datos de las asignaturas a los elementos del ViewHolder
+     * @param holder El ViewHolder de la lista de asignaturas
+     * @param position La posicion de la asignatura en la lista
+     */
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        //holder.id_asignatura_text.setText(String.valueOf(id_asignatura.get(position)));
         holder.nombreAsignaturaText.setText(String.valueOf(nombre_asignatura.get(position)));
         holder.calificacionAsignaturaText.setText(String.valueOf(calificacion_asignatura.get(position)));
     }
 
+    /**
+     * @descripcion Metodo que se encarga de obtener el numero de asignaturas
+     * @return int Número de asignaturas
+     */
     @Override
     public int getItemCount() {
         return id_asignatura.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    /**
+     * @clase MyViewHolder
+     *
+     * @descripcion Clase que se encarga de inicializar los elementos del ViewHolder
+     */
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombreAsignaturaText;
         TextView calificacionAsignaturaText;
-        // TextView id_asignatura_text
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            //id_asignatura_text = itemView.findViewById(R.id.id_asignatura_text);
+
             nombreAsignaturaText = itemView.findViewById(R.id.nombreAsignaturaText);
             calificacionAsignaturaText = itemView.findViewById(R.id.calificacionAsignaturaText);
         }
