@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TrabajoInicial</string>
+    <string name="app_name">Calificaciones UAH</string>
     <string name="main_activity_name">Calificaciones UAH</string>
     <string name="create_activity_name">Añadir asignatura</string>
     <string name="ic_add_30_contentDescription">Añadir</string>

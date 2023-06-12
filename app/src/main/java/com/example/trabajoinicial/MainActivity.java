@@ -1,7 +1,6 @@
 package com.example.trabajoinicial;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.splashscreen.SplashScreen;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,19 +24,22 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-
     private AsignaturasSQLiteHelper asignaturasdb;
     private ArrayList<String> nombre_asignatura;
     private ArrayList<Integer> id_asignatura, calificacion_asignatura;
 
+    /**
+     * @descripcion Método que se ejecuta al crear la actividad
+     * @param savedInstanceState Bundle con el estado de la actividad
+     * @see Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        SplashScreen.installSplashScreen(this);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // [Views] Elementos de las vistas. RecyclerView y botón flotante
         recyclerView = findViewById(R.id.listRecyclerView);
         ExtendedFloatingActionButton addExtendedFloatingActionButton = findViewById(R.id.addExtendedFloatingActionButton);
         addExtendedFloatingActionButton.setOnClickListener(view -> {
@@ -45,13 +47,18 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // [SQLite] Inicialización de la base de datos
         asignaturasdb = new AsignaturasSQLiteHelper(MainActivity.this);
 
+        // [ArrayLists] Inicialización de los ArrayLists que se usarán para mostrar los datos
         id_asignatura = new ArrayList<>();
         nombre_asignatura = new ArrayList<>();
         calificacion_asignatura = new ArrayList<>();
     }
 
+    /**
+     * @descripcion Método que se ejecuta al iniciar la actividad
+     */
     @Override
     protected void onStart() {
         super.onStart();
@@ -59,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         loadData();
     }
 
+    /**
+     * @descripcion Método que se ejecuta al reanudar la actividad
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -66,18 +76,27 @@ public class MainActivity extends AppCompatActivity {
         loadData();
     }
 
+    /**
+     * @descripcion Método que se ejecuta al parar la actividad
+     */
     @Override
     protected void onStop() {
         super.onStop();
         clearArrayLists();
     }
 
+    /**
+     * @descripcion Método que borra los ArrayLists
+     */
     private void clearArrayLists() {
         id_asignatura.clear();
         nombre_asignatura.clear();
         calificacion_asignatura.clear();
     }
 
+    /**
+     * @descripcion Método que carga los datos de la base de datos en los ArrayLists
+     */
     private void loadData() {
         clearArrayLists();
 
@@ -94,5 +113,4 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(asignaturasCustomAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
     }
-
 }

@@ -5,30 +5,30 @@
 <h6 align="center">Universidad de Alcalá</h6>
 <hr>
 
-<!-- ÍNIDICE -->
+<!-- ÍNDICE -->
 
 <details open="open">
   <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#about-the-project">El proyecto</a>
+      <a href="#el-proyecto">El proyecto</a>
       <ul>
-        <li><a href="#built-with">Stack</a></li>
+        <li><a href="#stack">Stack</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Como empezar</a>
+      <a href="#como-empezar">Como empezar</a>
       <ul>
-        <li><a href="#prerequisites">Requisitos previos</a></li>
-        <li><a href="#installation">Instalación</a></li>
+        <li><a href="#requisitos-previos">Requisitos previos</a></li>
+        <li><a href="#instalacion">Instalación</a></li>
       </ul>
     </li>
-    <li><a href="#license">Licenciamiento</a></li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#licenciamiento">Licenciamiento</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ol>
 </details>
 
-<!-- EL RPOYECTO -->
+<!-- EL PROYECTO -->
 
 ## El proyecto
 
@@ -39,7 +39,7 @@ La aplicación consiste en una herramienta que permite llevar un listado de las 
 
 ![Trabajo Inicial](./documentacion/practica_inicial_enunciado.pdf)
 
-Demo de la app: Apk instalable [Calificaciones - UAH](./documentation/apk/calificaciones.apk)
+Demo de la app: Apk instalable [Calificaciones - UAH](./documentacion/apk/calificacionesUAH.apk)
 
 ### Stack
 

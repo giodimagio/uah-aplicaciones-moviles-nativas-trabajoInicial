@@ -72,7 +72,6 @@ public class AsignaturasCustomAdapter extends RecyclerView.Adapter<AsignaturasCu
 
     /**
      * @clase MyViewHolder
-     *
      * @descripcion Clase que se encarga de inicializar los elementos del ViewHolder
      */
     public static class MyViewHolder extends RecyclerView.ViewHolder {
