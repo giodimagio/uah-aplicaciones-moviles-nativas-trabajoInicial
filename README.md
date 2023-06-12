@@ -39,7 +39,7 @@ La aplicación consiste en una herramienta que permite llevar un listado de las 
 
 ![Trabajo Inicial](./documentacion/practica_inicial_enunciado.pdf)
 
-Demo de la app: Apk instalable [Calificaciones - UAH](./documentacion/apk/calificacionesUAH.apk)
+Demo de la app. Se adjuntará junto a la entrega un apk instalable. No se sube a GitHub.
 
 ### Stack
 
